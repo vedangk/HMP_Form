@@ -1,0 +1,7 @@
+name: 'Person Info Form'
+type: module
+description: 'Custom form to collect user info.'
+package: Custom
+core_version_requirement: ^10
+dependencies:
+  - drupal:system

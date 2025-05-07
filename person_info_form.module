@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function person_info_form_schema() {
+  $schema['person_info_submissions'] = [
+    'description' => 'Stores submitted person info data.',
+    'fields' => [
+      'id' => [
+        'description' => 'Primary Key: Unique submission ID',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'first_name' => [
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE,
+      ],
+      'last_name' => [
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE,
+      ],
+      'email' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+      'phone_type' => [
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => TRUE,
+      ],
+      'phone_number' => [
+        'type' => 'varchar',
+        'length' => 20,
+        'not null' => TRUE,
+      ],
+      'favorite_colors' => [
+        'type' => 'text',
+        'not null' => FALSE,
+      ],
+      'created' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'description' => 'Timestamp of submission',
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}

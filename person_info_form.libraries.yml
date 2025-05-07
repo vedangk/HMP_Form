@@ -1,0 +1,18 @@
+choices:
+  version: 1.x
+  css:
+    theme:
+      libraries/choices/choices.min.css: {}
+  js:
+    libraries/choices/choices.min.js: {}
+
+form_styles:
+  version: 1.x
+  css:
+    theme:
+      css/person_info_form.css: {}
+  js:
+    js/person_info_form.js: {}
+  dependencies:
+    - core/drupal
+    - person_info_form/choices

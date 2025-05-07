@@ -1,0 +1,15 @@
+person_info_form.form:
+  path: '/person-info'
+  defaults:
+    _form: '\Drupal\person_info_form\Form\PersonInfoForm'
+    _title: 'Sign up'
+  requirements:
+    _permission: 'access content'
+
+person_info_form.submissions:
+  path: '/admin/person-info/submissions'
+  defaults:
+    _controller: '\Drupal\person_info_form\Controller\SubmissionListController::list'
+    _title: 'Person Info Submissions'
+  requirements:
+    _permission: 'access content'
